@@ -33,17 +33,21 @@ def main():
     ap.add_argument("--B", type=int, default=1024)
     ap.add_argument("--version", default="beta3", choices=["beta2", "beta3"])
     ap.add_argument("--solo", default="caso_a,caso_b")
+    ap.add_argument("--pin", action="store_true")
     ap.add_argument("--out", default="resultados.csv")
     a = ap.parse_args()
     ns = [int(x) for x in a.ns.split(",")]
     ps = [int(x) for x in a.ps.split(",")]
     if "caso_a" in a.solo and any(a.q % p for p in ps):
         raise SystemExit(f"q={a.q} debe ser múltiplo de todos los p={ps}")
+    if a.pin and a.version != "beta3":
+        raise SystemExit("--pin solo aplica a beta3")
     par = beta3_pram if a.version == "beta3" else beta2_pool
+    extra = {"pin": True} if a.pin else {}
     d = mlp.D_DEFAULT
     B = a.B or None
     nuevo = not os.path.exists(a.out)
-    print(f"# {platform.node()} cpus={os.cpu_count()} q={a.q} E={a.E} h={a.h} d={d} B={a.B} version={a.version} experimentos={a.solo}", flush=True)
+    print(f"# {platform.node()} cpus={os.cpu_count()} q={a.q} E={a.E} h={a.h} d={d} B={a.B} version={a.version} experimentos={a.solo} pin={a.pin}", flush=True)
     with open(a.out, "a", newline="") as f:
         w = csv.DictWriter(f, fieldnames=CAMPOS)
         if nuevo:
@@ -55,16 +59,16 @@ def main():
                     w.writerow(_fila("caso_a", r, rep, a.E, a.h, d)); f.flush()
                     print(f"[{_hora()}] caso_a seq n={n} q={a.q} T={r['t_total']:.2f}s s*={r['seed']}", flush=True)
                     for p in ps:
-                        r = par.run(n, a.q, p, d, a.h, a.E, B)
+                        r = par.run(n, a.q, p, d, a.h, a.E, B, **extra)
                         w.writerow(_fila("caso_a", r, rep, a.E, a.h, d)); f.flush()
-                        print(f"[{_hora()}] caso_a {a.version} n={n} q={a.q} p={p} T={r['t_total']:.2f}s acc={r['acc']:.4f} s*={r['seed']} cpu/pared={r['cpu_ratio']:.3f} nivcsw={r['nivcsw']}", flush=True)
+                        print(f"[{_hora()}] caso_a {r['version']} n={n} q={a.q} p={p} T={r['t_total']:.2f}s acc={r['acc']:.4f} s*={r['seed']} cpu/pared={r['cpu_ratio']:.3f} nivcsw={r['nivcsw']}", flush=True)
                 if "caso_b" in a.solo:
                     for p in ps:
                         r = beta1_secuencial.run(n, p, d, a.h, a.E, B)
                         w.writerow(_fila("caso_b", r, rep, a.E, a.h, d)); f.flush()
-                        r = par.run(n, p, p, d, a.h, a.E, B)
+                        r = par.run(n, p, p, d, a.h, a.E, B, **extra)
                         w.writerow(_fila("caso_b", r, rep, a.E, a.h, d)); f.flush()
-                        print(f"[{_hora()}] caso_b {a.version} n={n} q=p={p} T={r['t_total']:.2f}s acc={r['acc']:.4f} s*={r['seed']} cpu/pared={r['cpu_ratio']:.3f} nivcsw={r['nivcsw']}", flush=True)
+                        print(f"[{_hora()}] caso_b {r['version']} n={n} q=p={p} T={r['t_total']:.2f}s acc={r['acc']:.4f} s*={r['seed']} cpu/pared={r['cpu_ratio']:.3f} nivcsw={r['nivcsw']}", flush=True)
 
 
 if __name__ == "__main__":
