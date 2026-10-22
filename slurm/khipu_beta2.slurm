@@ -5,7 +5,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=32G
-#SBATCH --time=01:30:00
+#SBATCH --time=02:00:00
 #SBATCH --output=slurm_beta2_%j.out
 #SBATCH --error=slurm_beta2_%j.err
 
