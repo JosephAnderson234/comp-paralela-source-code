@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.csv
+*.joblib
+figs*/
+slurm_*.out
+slurm_*.err
+lscpu_*.txt
+numa_n*.txt
