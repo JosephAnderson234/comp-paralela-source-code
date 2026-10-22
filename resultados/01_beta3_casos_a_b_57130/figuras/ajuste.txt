@@ -1,0 +1,7 @@
+T_p = a*ceil(q/p)*n + b*log2(p) + c  (ajuste conjunto casos A y B)
+a = 6.116493e-05 s/(modelo*muestra)
+b = 6.770276e-01 s/nivel
+c = -4.714035e-01 s
+R^2 global = 0.98947
+R^2 caso A = 0.99143
+R^2 caso B = 0.66210

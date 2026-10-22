@@ -1,0 +1,22 @@
+nodo: n003  cpus: 32
+available: 2 nodes (0-1)
+node 0 cpus: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+node 0 size: 128557 MB
+node 0 free: 683 MB
+node 1 cpus: 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63
+node 1 size: 96758 MB
+node 1 free: 1338 MB
+node distances:
+node   0   1 
+  0:  10  21 
+  1:  21  10 
+governor: no visible
+# cpus permitidas=[2, 3, 4, 5, 6, 7, 8, 9, 10, 23, 24, 25, 26, 27, 28, 29, 34, 35, 36, 37, 38, 39, 40, 41, 42, 55, 56, 57, 58, 59, 60, 61]
+# por socket={0: [2, 3, 4, 5, 6, 7, 8, 9, 10, 34, 35, 36, 37, 38, 39, 40, 41, 42], 1: [23, 24, 25, 26, 27, 28, 29, 55, 56, 57, 58, 59, 60, 61]}
+# datos cargados por el padre fijado en cpu 2 (socket 0); n=40000 E=200 B=1024 reps=3
+libre (sin fijar)                  T_mediana=  3.782s  cpu/pared=0.995  MHz_medio=   2133  cpus_usadas=[3, 35, 36] socket=[0]
+fijo cpu 2 (mismo socket que los datos) T_mediana=  3.821s  cpu/pared=0.995  MHz_medio=   2130  cpus_usadas=[2, 3, 35] socket=[0]
+fijo cpu 2 + copia local datos     T_mediana=  3.749s  cpu/pared=0.995  MHz_medio=   2134  cpus_usadas=[2, 37] socket=[0]
+fijo cpu 23 (otro socket que los datos) T_mediana=  3.255s  cpu/pared=0.995  MHz_medio=   2374  cpus_usadas=[23, 37, 42] socket=[0, 1]
+fijo cpu 23 + copia local datos    T_mediana=  3.221s  cpu/pared=0.995  MHz_medio=   2369  cpus_usadas=[23, 38, 42] socket=[0, 1]
+libre (sin fijar), repetición      T_mediana=  3.782s  cpu/pared=0.995  MHz_medio=   2150  cpus_usadas=[2, 3, 34] socket=[0]

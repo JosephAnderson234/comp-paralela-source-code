@@ -1,0 +1,24 @@
+nodo: n004  cpus: 8
+available: 2 nodes (0-1)
+node 0 cpus: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47
+node 0 size: 64089 MB
+node 0 free: 14229 MB
+node 1 cpus: 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63
+node 1 size: 161226 MB
+node 1 free: 25961 MB
+node distances:
+node   0   1 
+  0:  10  21 
+  1:  21  10 
+governor: no visible
+# cpus permitidas=[28, 29, 30, 31, 60, 61, 62, 63]
+# por socket={1: [28, 29, 30, 31, 60, 61, 62, 63]}
+# datos cargados por el padre fijado en cpu 28 (socket 1); n=40000 E=200 B=1024 reps=3
+libre (sin fijar)                  T_mediana=  3.873s  cpu/pared=0.995  MHz_medio=   2237  cpus_usadas=[29, 61] socket=[1]
+fijo cpu 28 (mismo socket que los datos) T_mediana=  4.116s  cpu/pared=0.995  MHz_medio=   1999  cpus_usadas=[28, 29, 61] socket=[1]
+fijo cpu 28 + copia local datos    T_mediana=  2.808s  cpu/pared=0.996  MHz_medio=   2894  cpus_usadas=[28, 30, 60] socket=[1]
+libre (sin fijar), repetición      T_mediana=  2.564s  cpu/pared=0.996  MHz_medio=   3229  cpus_usadas=[30, 62] socket=[1]
+beta3 n=40000 q=4 p=1 B=1024 T=10.699s (map 10.690s, reduce 0.005ms) mejor semilla=2 acc=0.8456
+beta3_pin n=40000 q=4 p=1 B=1024 T=10.185s (map 10.175s, reduce 0.005ms) mejor semilla=2 acc=0.8456
+beta3 n=40000 q=4 p=1 B=1024 T=10.314s (map 10.303s, reduce 0.004ms) mejor semilla=2 acc=0.8456
+beta3_pin n=40000 q=4 p=1 B=1024 T=10.073s (map 10.062s, reduce 0.006ms) mejor semilla=2 acc=0.8456

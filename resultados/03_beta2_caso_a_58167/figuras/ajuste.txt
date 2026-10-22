@@ -1,0 +1,6 @@
+T_p = a*ceil(q/p)*n + b*log2(p) + c  (ajuste conjunto de los casos presentes)
+a = 1.242942e-04 s/(modelo*muestra)
+b = 5.309922e+00 s/nivel
+c = -1.179464e+01 s
+R^2 global = 0.93144
+R^2 caso A = 0.93144

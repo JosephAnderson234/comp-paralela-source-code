@@ -1,0 +1,121 @@
+nodo: n003  cpus: 32
+# n003 cpus=64 q=32 qs=[32, 64, 128, 256] E=200 h=32 d=20 B=1024 B_par=0 version=beta2 experimentos=caso_a pin=False
+[16:48:12] caso_a seq n=5000 q=32 T=9.39s s*=15
+[16:48:30] caso_a beta2 n=5000 q=32 p=1 T=18.45s acc=0.8790 s*=15 cpu/pared=0.995 nivcsw=24
+[16:48:40] caso_a beta2 n=5000 q=32 p=2 T=9.59s acc=0.8790 s*=15 cpu/pared=0.989 nivcsw=24
+[16:48:46] caso_a beta2 n=5000 q=32 p=4 T=6.08s acc=0.8790 s*=15 cpu/pared=0.985 nivcsw=38
+[16:48:50] caso_a beta2 n=5000 q=32 p=8 T=4.03s acc=0.8790 s*=15 cpu/pared=0.988 nivcsw=49
+[16:48:53] caso_a beta2 n=5000 q=32 p=16 T=3.38s acc=0.8790 s*=15 cpu/pared=0.867 nivcsw=68
+[16:48:56] caso_a beta2 n=5000 q=32 p=32 T=2.80s acc=0.8790 s*=15 cpu/pared=0.881 nivcsw=151
+[16:49:15] caso_a seq n=10000 q=32 T=18.74s s*=1
+[16:49:51] caso_a beta2 n=10000 q=32 p=1 T=35.80s acc=0.8595 s*=1 cpu/pared=0.996 nivcsw=48
+[16:50:11] caso_a beta2 n=10000 q=32 p=2 T=20.28s acc=0.8595 s*=1 cpu/pared=0.995 nivcsw=53
+[16:50:25] caso_a beta2 n=10000 q=32 p=4 T=13.39s acc=0.8595 s*=1 cpu/pared=0.993 nivcsw=66
+[16:50:33] caso_a beta2 n=10000 q=32 p=8 T=8.88s acc=0.8595 s*=1 cpu/pared=0.985 nivcsw=97
+[16:50:41] caso_a beta2 n=10000 q=32 p=16 T=8.01s acc=0.8595 s*=1 cpu/pared=0.899 nivcsw=167
+[16:50:48] caso_a beta2 n=10000 q=32 p=32 T=6.32s acc=0.8595 s*=1 cpu/pared=0.878 nivcsw=329
+[16:51:23] caso_a seq n=20000 q=32 T=35.47s s*=21
+[16:52:28] caso_a beta2 n=20000 q=32 p=1 T=64.99s acc=0.8778 s*=21 cpu/pared=0.996 nivcsw=87
+[16:53:08] caso_a beta2 n=20000 q=32 p=2 T=39.30s acc=0.8778 s*=21 cpu/pared=0.995 nivcsw=101
+[16:53:32] caso_a beta2 n=20000 q=32 p=4 T=24.45s acc=0.8778 s*=21 cpu/pared=0.990 nivcsw=131
+[16:53:51] caso_a beta2 n=20000 q=32 p=8 T=18.47s acc=0.8778 s*=21 cpu/pared=0.988 nivcsw=200
+[16:54:08] caso_a beta2 n=20000 q=32 p=16 T=17.24s acc=0.8778 s*=21 cpu/pared=0.919 nivcsw=340
+[16:54:21] caso_a beta2 n=20000 q=32 p=32 T=13.30s acc=0.8778 s*=21 cpu/pared=0.882 nivcsw=633
+[16:55:37] caso_a seq n=40000 q=32 T=75.75s s*=8
+[16:58:03] caso_a beta2 n=40000 q=32 p=1 T=146.19s acc=0.8469 s*=8 cpu/pared=0.996 nivcsw=188
+[16:59:30] caso_a beta2 n=40000 q=32 p=2 T=86.27s acc=0.8469 s*=8 cpu/pared=0.995 nivcsw=223
+[17:00:21] caso_a beta2 n=40000 q=32 p=4 T=51.19s acc=0.8469 s*=8 cpu/pared=0.991 nivcsw=346
+[17:01:00] caso_a beta2 n=40000 q=32 p=8 T=38.82s acc=0.8469 s*=8 cpu/pared=0.993 nivcsw=707
+[17:01:34] caso_a beta2 n=40000 q=32 p=16 T=34.11s acc=0.8469 s*=8 cpu/pared=0.915 nivcsw=710
+[17:02:00] caso_a beta2 n=40000 q=32 p=32 T=25.71s acc=0.8469 s*=8 cpu/pared=0.964 nivcsw=1620
+[17:02:09] caso_a seq n=5000 q=32 T=9.26s s*=15
+[17:02:20] caso_a beta2 n=5000 q=32 p=1 T=11.00s acc=0.8790 s*=15 cpu/pared=0.995 nivcsw=16
+[17:02:26] caso_a beta2 n=5000 q=32 p=2 T=5.61s acc=0.8790 s*=15 cpu/pared=0.990 nivcsw=17
+[17:02:29] caso_a beta2 n=5000 q=32 p=4 T=3.39s acc=0.8790 s*=15 cpu/pared=0.975 nivcsw=18
+[17:02:32] caso_a beta2 n=5000 q=32 p=8 T=2.60s acc=0.8790 s*=15 cpu/pared=0.982 nivcsw=27
+[17:02:34] caso_a beta2 n=5000 q=32 p=16 T=2.68s acc=0.8790 s*=15 cpu/pared=0.879 nivcsw=85
+[17:02:37] caso_a beta2 n=5000 q=32 p=32 T=2.94s acc=0.8790 s*=15 cpu/pared=0.828 nivcsw=129
+[17:02:55] caso_a seq n=10000 q=32 T=18.16s s*=1
+[17:03:17] caso_a beta2 n=10000 q=32 p=1 T=21.86s acc=0.8595 s*=1 cpu/pared=0.995 nivcsw=29
+[17:03:30] caso_a beta2 n=10000 q=32 p=2 T=12.66s acc=0.8595 s*=1 cpu/pared=0.990 nivcsw=35
+[17:03:39] caso_a beta2 n=10000 q=32 p=4 T=8.54s acc=0.8595 s*=1 cpu/pared=0.992 nivcsw=44
+[17:03:46] caso_a beta2 n=10000 q=32 p=8 T=7.33s acc=0.8595 s*=1 cpu/pared=0.987 nivcsw=82
+[17:03:54] caso_a beta2 n=10000 q=32 p=16 T=7.60s acc=0.8595 s*=1 cpu/pared=0.914 nivcsw=110
+[17:04:00] caso_a beta2 n=10000 q=32 p=32 T=6.53s acc=0.8595 s*=1 cpu/pared=0.817 nivcsw=255
+[17:04:37] caso_a seq n=20000 q=32 T=36.36s s*=21
+[17:05:25] caso_a beta2 n=20000 q=32 p=1 T=48.09s acc=0.8778 s*=21 cpu/pared=0.995 nivcsw=72
+[17:05:54] caso_a beta2 n=20000 q=32 p=2 T=29.71s acc=0.8778 s*=21 cpu/pared=0.995 nivcsw=84
+[17:06:15] caso_a beta2 n=20000 q=32 p=4 T=20.53s acc=0.8778 s*=21 cpu/pared=0.993 nivcsw=94
+[17:06:32] caso_a beta2 n=20000 q=32 p=8 T=17.43s acc=0.8778 s*=21 cpu/pared=0.993 nivcsw=150
+[17:06:50] caso_a beta2 n=20000 q=32 p=16 T=17.26s acc=0.8778 s*=21 cpu/pared=0.918 nivcsw=238
+[17:07:03] caso_a beta2 n=20000 q=32 p=32 T=13.63s acc=0.8778 s*=21 cpu/pared=0.851 nivcsw=366
+[17:08:15] caso_a seq n=40000 q=32 T=72.02s s*=8
+[17:10:43] caso_a beta2 n=40000 q=32 p=1 T=147.01s acc=0.8469 s*=8 cpu/pared=0.996 nivcsw=193
+[17:12:09] caso_a beta2 n=40000 q=32 p=2 T=86.04s acc=0.8469 s*=8 cpu/pared=0.995 nivcsw=230
+[17:13:02] caso_a beta2 n=40000 q=32 p=4 T=53.64s acc=0.8469 s*=8 cpu/pared=0.989 nivcsw=295
+[17:13:42] caso_a beta2 n=40000 q=32 p=8 T=39.27s acc=0.8469 s*=8 cpu/pared=0.987 nivcsw=417
+[17:14:15] caso_a beta2 n=40000 q=32 p=16 T=33.23s acc=0.8469 s*=8 cpu/pared=0.898 nivcsw=735
+[17:14:41] caso_a beta2 n=40000 q=32 p=32 T=26.47s acc=0.8469 s*=8 cpu/pared=0.976 nivcsw=1372
+[17:14:51] caso_a seq n=5000 q=32 T=9.94s s*=15
+[17:15:02] caso_a beta2 n=5000 q=32 p=1 T=10.91s acc=0.8790 s*=15 cpu/pared=0.995 nivcsw=17
+[17:15:08] caso_a beta2 n=5000 q=32 p=2 T=5.81s acc=0.8790 s*=15 cpu/pared=0.985 nivcsw=14
+[17:15:12] caso_a beta2 n=5000 q=32 p=4 T=3.57s acc=0.8790 s*=15 cpu/pared=0.980 nivcsw=20
+[17:15:14] caso_a beta2 n=5000 q=32 p=8 T=2.68s acc=0.8790 s*=15 cpu/pared=0.982 nivcsw=31
+[17:15:17] caso_a beta2 n=5000 q=32 p=16 T=2.71s acc=0.8790 s*=15 cpu/pared=0.877 nivcsw=52
+[17:15:20] caso_a beta2 n=5000 q=32 p=32 T=2.88s acc=0.8790 s*=15 cpu/pared=0.823 nivcsw=134
+[17:15:38] caso_a seq n=10000 q=32 T=18.01s s*=1
+[17:16:00] caso_a beta2 n=10000 q=32 p=1 T=21.44s acc=0.8595 s*=1 cpu/pared=0.995 nivcsw=29
+[17:16:12] caso_a beta2 n=10000 q=32 p=2 T=12.71s acc=0.8595 s*=1 cpu/pared=0.994 nivcsw=36
+[17:16:21] caso_a beta2 n=10000 q=32 p=4 T=8.81s acc=0.8595 s*=1 cpu/pared=0.992 nivcsw=49
+[17:16:28] caso_a beta2 n=10000 q=32 p=8 T=7.16s acc=0.8595 s*=1 cpu/pared=0.987 nivcsw=87
+[17:16:36] caso_a beta2 n=10000 q=32 p=16 T=7.58s acc=0.8595 s*=1 cpu/pared=0.919 nivcsw=144
+[17:16:42] caso_a beta2 n=10000 q=32 p=32 T=6.16s acc=0.8595 s*=1 cpu/pared=0.794 nivcsw=271
+[17:17:19] caso_a seq n=20000 q=32 T=36.83s s*=21
+[17:18:07] caso_a beta2 n=20000 q=32 p=1 T=47.63s acc=0.8778 s*=21 cpu/pared=0.995 nivcsw=66
+[17:18:36] caso_a beta2 n=20000 q=32 p=2 T=29.83s acc=0.8778 s*=21 cpu/pared=0.994 nivcsw=82
+[17:18:57] caso_a beta2 n=20000 q=32 p=4 T=20.60s acc=0.8778 s*=21 cpu/pared=0.993 nivcsw=96
+[17:19:14] caso_a beta2 n=20000 q=32 p=8 T=17.33s acc=0.8778 s*=21 cpu/pared=0.993 nivcsw=116
+[17:19:31] caso_a beta2 n=20000 q=32 p=16 T=16.62s acc=0.8778 s*=21 cpu/pared=0.904 nivcsw=262
+[17:19:44] caso_a beta2 n=20000 q=32 p=32 T=13.20s acc=0.8778 s*=21 cpu/pared=0.818 nivcsw=359
+[17:20:56] caso_a seq n=40000 q=32 T=71.93s s*=8
+[17:23:15] caso_a beta2 n=40000 q=32 p=1 T=138.74s acc=0.8469 s*=8 cpu/pared=0.996 nivcsw=181
+[17:24:38] caso_a beta2 n=40000 q=32 p=2 T=83.06s acc=0.8469 s*=8 cpu/pared=0.995 nivcsw=216
+[17:25:31] caso_a beta2 n=40000 q=32 p=4 T=52.20s acc=0.8469 s*=8 cpu/pared=0.990 nivcsw=266
+[17:26:09] caso_a beta2 n=40000 q=32 p=8 T=38.85s acc=0.8469 s*=8 cpu/pared=0.988 nivcsw=420
+[17:26:43] caso_a beta2 n=40000 q=32 p=16 T=33.32s acc=0.8469 s*=8 cpu/pared=0.883 nivcsw=676
+[17:27:12] caso_a beta2 n=40000 q=32 p=32 T=29.36s acc=0.8469 s*=8 cpu/pared=0.949 nivcsw=1550
+T_p = a*ceil(q/p)*n + b*log2(p) + c  (ajuste conjunto de los casos presentes)
+a = 1.242942e-04 s/(modelo*muestra)
+b = 5.309922e+00 s/nivel
+c = -1.179464e+01 s
+R^2 global = 0.93144
+R^2 caso A = 0.93144
+
+Caso A (q fijo, escalabilidad fuerte):
+    n  q  p    t_total      T_teo        S        E      acc  cpu_ratio  nivcsw
+ 5000 32  1  11.002550   8.092431 0.853033 0.853033 0.879000   0.994564      24
+ 5000 32  2   5.808390   3.458817 1.615858 0.807929 0.879000   0.985299      24
+ 5000 32  4   3.572514   3.796971 2.627151 0.656788 0.879000   0.975313      38
+ 5000 32  8   2.675985   6.621009 3.507320 0.438415 0.879000   0.981829      49
+ 5000 32 16   2.713445  10.687989 3.458900 0.216181 0.879000   0.867442      85
+ 5000 32 32   2.877451  15.376440 3.261753 0.101930 0.879000   0.823258     151
+10000 32  1  21.859463  27.979502 0.830865 0.830865 0.859500   0.995215      48
+10000 32  2  12.707103  13.402353 1.429300 0.714650 0.859500   0.989805      53
+10000 32  4   8.808427   8.768739 2.061919 0.515480 0.859500   0.991570      66
+10000 32  8   7.326422   9.106893 2.479009 0.309876 0.859500   0.985089      97
+10000 32 16   7.599707  11.930931 2.389864 0.149366 0.859500   0.899059     167
+10000 32 32   6.319119  15.997911 2.874176 0.089818 0.859500   0.793535     329
+20000 32  1  48.090428  67.753644 0.756108 0.756108 0.877750   0.995316      87
+20000 32  2  29.834927  33.289424 1.218757 0.609379 0.877750   0.994477     101
+20000 32  4  20.599431  18.712275 1.765172 0.441293 0.877750   0.989584     131
+20000 32  8  17.426163  14.078661 2.086606 0.260826 0.877750   0.988383     200
+20000 32 16  17.235722  14.416815 2.109662 0.131854 0.877750   0.904003     340
+20000 32 32  13.297175  17.240853 2.734531 0.085454 0.877750   0.817893     633
+40000 32  1 146.185938 147.301928 0.492629 0.492629 0.846875   0.995589     193
+40000 32  2  86.039004  73.063566 0.837010 0.418505 0.846875   0.995329     230
+40000 32  4  52.199700  38.599346 1.379615 0.344904 0.846875   0.989273     346
+40000 32  8  38.845208  24.022196 1.853909 0.231739 0.846875   0.986970     707
+40000 32 16  33.321759  19.388583 2.161215 0.135076 0.846875   0.882570     735
+40000 32 32  26.467983  19.726737 2.720852 0.085027 0.846875   0.949237    1620
+
+Figuras en figs_beta2/

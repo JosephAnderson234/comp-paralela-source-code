@@ -1,0 +1,52 @@
+beta1 n=5000 q=8 B=1024 T=1.035s mejor semilla=4 acc=0.8790
+beta3 n=5000 q=8 p=4 B=1024 T=0.292s (map 0.265s, reduce 0.386ms) mejor semilla=4 acc=0.8790
+# n004 cpus=64 q=8 E=50 h=32 d=20 B=1024 version=beta3 experimentos=caso_a,caso_b
+[14:45:14] caso_a seq n=2000 q=8 T=0.44s s*=5
+[14:45:14] caso_a beta3 n=2000 q=8 p=1 T=0.45s acc=0.8825 s*=5 cpu/pared=0.995 nivcsw=0
+[14:45:14] caso_a beta3 n=2000 q=8 p=2 T=0.24s acc=0.8825 s*=5 cpu/pared=0.994 nivcsw=0
+[14:45:15] caso_a beta3 n=2000 q=8 p=4 T=0.14s acc=0.8825 s*=5 cpu/pared=0.994 nivcsw=1
+[14:45:15] caso_a beta3 n=2000 q=8 p=8 T=0.15s acc=0.8825 s*=5 cpu/pared=0.992 nivcsw=9
+[14:45:15] caso_b beta3 n=2000 q=p=1 T=0.07s acc=0.8600 s*=0 cpu/pared=0.995 nivcsw=0
+[14:45:15] caso_b beta3 n=2000 q=p=2 T=0.08s acc=0.8675 s*=1 cpu/pared=0.995 nivcsw=0
+[14:45:15] caso_b beta3 n=2000 q=p=4 T=0.08s acc=0.8750 s*=2 cpu/pared=0.994 nivcsw=0
+[14:45:16] caso_b beta3 n=2000 q=p=8 T=0.15s acc=0.8825 s*=5 cpu/pared=0.992 nivcsw=2
+[14:45:17] caso_a seq n=5000 q=8 T=1.05s s*=4
+[14:45:18] caso_a beta3 n=5000 q=8 p=1 T=1.06s acc=0.8790 s*=4 cpu/pared=0.995 nivcsw=1
+[14:45:19] caso_a beta3 n=5000 q=8 p=2 T=0.54s acc=0.8790 s*=4 cpu/pared=0.995 nivcsw=2
+[14:45:19] caso_a beta3 n=5000 q=8 p=4 T=0.29s acc=0.8790 s*=4 cpu/pared=0.994 nivcsw=1
+[14:45:19] caso_a beta3 n=5000 q=8 p=8 T=0.30s acc=0.8790 s*=4 cpu/pared=0.991 nivcsw=2
+[14:45:20] caso_b beta3 n=5000 q=p=1 T=0.14s acc=0.8630 s*=0 cpu/pared=0.995 nivcsw=0
+[14:45:20] caso_b beta3 n=5000 q=p=2 T=0.15s acc=0.8650 s*=1 cpu/pared=0.995 nivcsw=0
+[14:45:21] caso_b beta3 n=5000 q=p=4 T=0.16s acc=0.8680 s*=2 cpu/pared=0.994 nivcsw=2
+[14:45:22] caso_b beta3 n=5000 q=p=8 T=0.29s acc=0.8790 s*=4 cpu/pared=0.992 nivcsw=8
+T_p = a*ceil(q/p)*n + b*log2(p) + c  (ajuste conjunto casos A y B)
+a = 2.659861e-05 s/(modelo*muestra)
+b = 3.580856e-02 s/nivel
+c = -7.665466e-03 s
+R^2 global = 0.98364
+R^2 caso A = 0.98670
+R^2 caso B = 0.80547
+
+Caso A (q fijo, escalabilidad fuerte):
+   n  q  p  t_total    T_teo        S        E    acc  cpu_ratio  nivcsw
+2000  8  1 0.450395 0.417912 0.981997 0.981997 0.8825   0.994828       0
+2000  8  2 0.238950 0.240932 1.850961 0.925480 0.8825   0.994356       0
+2000  8  4 0.137671 0.170346 3.212638 0.803159 0.8825   0.994186       1
+2000  8  8 0.149573 0.152957 2.956997 0.369625 0.8825   0.992189       9
+5000  8  1 1.059117 1.056279 0.992318 0.992318 0.8790   0.994788       1
+5000  8  2 0.536234 0.560115 1.959929 0.979965 0.8790   0.994573       2
+5000  8  4 0.289957 0.329938 3.624613 0.906153 0.8790   0.994332       1
+5000  8  8 0.297062 0.232753 3.537921 0.442240 0.8790   0.990724       2
+
+Caso B (q = p, escalabilidad débil):
+   n  q  p  t_total    T_teo        S        E    acc  cpu_ratio  nivcsw
+2000  1  1 0.069029 0.045532 0.817128 0.817128 0.8600   0.994581       0
+2000  2  2 0.075090 0.081340 1.474757 0.737378 0.8675   0.994605       0
+2000  4  4 0.083280 0.117149 2.632155 0.658039 0.8750   0.994195       0
+2000  8  8 0.148051 0.152957 2.975050 0.371881 0.8825   0.992216       2
+5000  1  1 0.144203 0.125328 0.909410 0.909410 0.8630   0.994679       0
+5000  2  2 0.149142 0.161136 1.757831 0.878915 0.8650   0.994617       0
+5000  4  4 0.158605 0.196945 3.297449 0.824362 0.8680   0.993957       2
+5000  8  8 0.288016 0.232753 3.637342 0.454668 0.8790   0.991929       8
+
+Figuras en figs_prueba/

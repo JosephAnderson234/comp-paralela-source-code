@@ -1,0 +1,8 @@
+# nodo=n004 cpus=16 kernel=4.18.0-553.123.1.el8_10.x86_64
+# clocksource=tsc
+# cpu=Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz
+# governor=?
+Traceback (most recent call last):
+  File "sleep_lat.py", line 18, in <module>
+    t0 = time.perf_counter_ns()
+AttributeError: module 'time' has no attribute 'perf_counter_ns'

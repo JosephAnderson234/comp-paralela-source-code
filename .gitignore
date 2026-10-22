@@ -7,3 +7,5 @@ slurm_*.out
 slurm_*.err
 lscpu_*.txt
 numa_n*.txt
+
+!resultados/**

@@ -13,6 +13,8 @@ Se entrenan q perceptrones multicapa con semillas distintas repartidas entre p p
 | `beta3_pram.py` | Paralela optimizada (algoritmo del informe): semillas `s mod p`, gradiente acumulado en bloques de 1024 que caben en caché, memoria compartida, Reduce en árbol de log p niveles con barreras (`--pin` fija cada proceso a un núcleo) |
 | `bench.py` | Barrido de experimentos, escribe un CSV. beta1 y beta3 usan bloques `--B`; beta2 siempre batch completo |
 | `analisis.py` | Speedup, eficiencia, ajuste `T_p = a·⌈q/p⌉·n + b·log2 p + c` y figuras |
+| `comparar_versiones.py` | Tabla y figura beta2 vs beta3 a partir de los resúmenes |
+| `resultados/` | Resultados de Khipu (CSV, logs y figuras), con guía en `resultados/README.md` |
 | `numa_prueba.py` | Diagnóstico de NUMA y frecuencia de CPU |
 | `slurm/` | Jobs de Khipu (`khipu.slurm` principal, `khipu_prueba.slurm` humo, `khipu_pin.slurm`, `khipu_beta2.slurm`) |
 | `slurm/diagnostico/` | Jobs de diagnóstico de NUMA/frecuencia |
